@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		C14FEBF81BF67897008E9BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEBF71BF67897008E9BD7 /* AppDelegate.swift */; };
-		C14FEBFA1BF67897008E9BD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEBF91BF67897008E9BD7 /* ViewController.swift */; };
+		C14FEBFA1BF67897008E9BD7 /* MyRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEBF91BF67897008E9BD7 /* MyRepositoriesViewController.swift */; };
 		C14FEBFD1BF67897008E9BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14FEBFB1BF67897008E9BD7 /* Main.storyboard */; };
 		C14FEC001BF67897008E9BD7 /* HoorayGitHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C14FEBFE1BF67897008E9BD7 /* HoorayGitHub.xcdatamodeld */; };
 		C14FEC021BF67897008E9BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14FEC011BF67897008E9BD7 /* Assets.xcassets */; };
 		C14FEC051BF67897008E9BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14FEC031BF67897008E9BD7 /* LaunchScreen.storyboard */; };
 		C14FEC101BF67897008E9BD7 /* HoorayGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC0F1BF67897008E9BD7 /* HoorayGitHubTests.swift */; };
 		C14FEC1B1BF67897008E9BD7 /* HoorayGitHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC1A1BF67897008E9BD7 /* HoorayGitHubUITests.swift */; };
+		C14FEC3C1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC3B1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift */; };
+		C14FEC3E1BF6CD68008E9BD7 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC3D1BF6CD68008E9BD7 /* UserSearchViewController.swift */; };
+		C14FEC401BF6CE86008E9BD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC3F1BF6CE86008E9BD7 /* LoginViewController.swift */; };
+		C14FEC421BF6CF79008E9BD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC411BF6CF79008E9BD7 /* User.swift */; };
+		C14FEC441BF6CF8B008E9BD7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC431BF6CF8B008E9BD7 /* Repository.swift */; };
+		C14FEC471BF6D1AD008E9BD7 /* GithubOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC461BF6D1AD008E9BD7 /* GithubOAuth.swift */; };
+		C14FEC491BF70151008E9BD7 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */; };
+		C14FEC4B1BF7049A008E9BD7 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		C14FEBF41BF67897008E9BD7 /* HoorayGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoorayGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FEBF71BF67897008E9BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C14FEBF91BF67897008E9BD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C14FEBF91BF67897008E9BD7 /* MyRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesViewController.swift; sourceTree = "<group>"; };
 		C14FEBFC1BF67897008E9BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C14FEBFF1BF67897008E9BD7 /* HoorayGitHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoorayGitHub.xcdatamodel; sourceTree = "<group>"; };
 		C14FEC011BF67897008E9BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		C14FEC161BF67897008E9BD7 /* HoorayGitHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoorayGitHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FEC1A1BF67897008E9BD7 /* HoorayGitHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoorayGitHubUITests.swift; sourceTree = "<group>"; };
 		C14FEC1C1BF67897008E9BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C14FEC3B1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewController.swift; sourceTree = "<group>"; };
+		C14FEC3D1BF6CD68008E9BD7 /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
+		C14FEC3F1BF6CE86008E9BD7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C14FEC411BF6CF79008E9BD7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C14FEC431BF6CF8B008E9BD7 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C14FEC461BF6D1AD008E9BD7 /* GithubOAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubOAuth.swift; sourceTree = "<group>"; };
+		C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				C14FEBF71BF67897008E9BD7 /* AppDelegate.swift */,
-				C14FEBF91BF67897008E9BD7 /* ViewController.swift */,
-				C14FEBFB1BF67897008E9BD7 /* Main.storyboard */,
+				C14FEC451BF6D105008E9BD7 /* API */,
+				C14FEC281BF678A5008E9BD7 /* Model */,
+				C14FEC2A1BF678C3008E9BD7 /* Controller */,
+				C14FEC291BF678AD008E9BD7 /* View */,
 				C14FEC011BF67897008E9BD7 /* Assets.xcassets */,
 				C14FEC031BF67897008E9BD7 /* LaunchScreen.storyboard */,
 				C14FEC061BF67897008E9BD7 /* Info.plist */,
@@ -126,6 +144,44 @@
 				C14FEC1C1BF67897008E9BD7 /* Info.plist */,
 			);
 			path = HoorayGitHubUITests;
+			sourceTree = "<group>";
+		};
+		C14FEC281BF678A5008E9BD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C14FEC411BF6CF79008E9BD7 /* User.swift */,
+				C14FEC431BF6CF8B008E9BD7 /* Repository.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C14FEC291BF678AD008E9BD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C14FEBFB1BF67897008E9BD7 /* Main.storyboard */,
+				C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */,
+				C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C14FEC2A1BF678C3008E9BD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C14FEC3F1BF6CE86008E9BD7 /* LoginViewController.swift */,
+				C14FEBF91BF67897008E9BD7 /* MyRepositoriesViewController.swift */,
+				C14FEC3B1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift */,
+				C14FEC3D1BF6CD68008E9BD7 /* UserSearchViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C14FEC451BF6D105008E9BD7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C14FEC461BF6D1AD008E9BD7 /* GithubOAuth.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C14FEBFA1BF67897008E9BD7 /* ViewController.swift in Sources */,
+				C14FEC401BF6CE86008E9BD7 /* LoginViewController.swift in Sources */,
+				C14FEC3C1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift in Sources */,
+				C14FEBFA1BF67897008E9BD7 /* MyRepositoriesViewController.swift in Sources */,
+				C14FEC441BF6CF8B008E9BD7 /* Repository.swift in Sources */,
+				C14FEC4B1BF7049A008E9BD7 /* CustomFlowLayout.swift in Sources */,
 				C14FEC001BF67897008E9BD7 /* HoorayGitHub.xcdatamodeld in Sources */,
 				C14FEBF81BF67897008E9BD7 /* AppDelegate.swift in Sources */,
+				C14FEC3E1BF6CD68008E9BD7 /* UserSearchViewController.swift in Sources */,
+				C14FEC471BF6D1AD008E9BD7 /* GithubOAuth.swift in Sources */,
+				C14FEC421BF6CF79008E9BD7 /* User.swift in Sources */,
+				C14FEC491BF70151008E9BD7 /* UserCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

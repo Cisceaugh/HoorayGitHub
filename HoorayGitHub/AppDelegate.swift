@@ -13,10 +13,69 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    var oAuthViewController: LoginViewController?
+    
+    func presentLoginViewController() {
+        
+        if let tabbarController = self.window?.rootViewController as? UITabBarController, homeViewController = tabbarController.viewControllers?.first as? MyRepositoriesViewController, storyboard = tabbarController.storyboard {
+            
+            
+            if let oAuthViewController = storyboard.instantiateViewControllerWithIdentifier(LoginViewController.identifier()) as? LoginViewController {
+                
+                homeViewController.addChildViewController(oAuthViewController)
+                homeViewController.view.addSubview(oAuthViewController.view)
+                oAuthViewController.didMoveToParentViewController(homeViewController)
+                
+                tabbarController.tabBar.hidden = true
+                
+                oAuthViewController.loginViewControllerCompletionHandler = ({
+                    UIView.animateWithDuration(0.6, delay: 1.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        oAuthViewController.view.alpha = 0.0
+                        }, completion: { (finished) -> Void in
+                            oAuthViewController.view.removeFromSuperview()
+                            oAuthViewController.removeFromParentViewController()
+                            
+                            tabbarController.tabBar.hidden = false
+                            
+                            // Make the call for repositories.
+                            homeViewController.update()
+                    })
+                })
+                
+                self.oAuthViewController = oAuthViewController
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    
+    
+    func checkOAuthStatus() {
+        do {
+            let token = try GithubOAuth.shared.accessToken()
+            print(token)
+        } catch _ {self.presentLoginViewController()}
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.checkOAuthStatus()
+        return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        GithubOAuth.shared.tokenRequestWithCallback(url, options: SaveOptions.UserDefaults) { (success) -> () in
+            if success {
+                if let oAuthViewController = self.oAuthViewController {
+                    oAuthViewController.processOauthRequest()
+                }
+            }
+        }
+        
         return true
     }
 
