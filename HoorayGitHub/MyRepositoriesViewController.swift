@@ -10,7 +10,7 @@ import UIKit
 
 class MyRepositoriesViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     var repositories = [Repository]() {
         didSet {
@@ -20,16 +20,16 @@ class MyRepositoriesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.update()
+        self.update()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     func update() {
         

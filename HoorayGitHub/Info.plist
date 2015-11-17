@@ -24,7 +24,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>https://github.com/Cisceaugh/HoorayGitHub</string>
+			<string>com.ciscohooraygithub</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>HoorayGitHub</string>

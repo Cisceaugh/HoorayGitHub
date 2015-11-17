@@ -33,10 +33,13 @@ class GithubOAuth {
     static let shared = GithubOAuth()
     
     func oAuthRequestWith(parameters: [String:String]) {
+        
         var parametersString = String()
         for parameter in parameters.values {
             parametersString = parametersString.stringByAppendingString(parameter)
         }
+        
+        print("\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)&scope=\(parametersString)")
         
         if let requestUrl = NSURL(string: "\(kOAuthBaseURLString)authorize?client_id=\(self.githubClientId)&scope=\(parametersString)") {
             UIApplication.sharedApplication().openURL(requestUrl)
@@ -87,6 +90,7 @@ class GithubOAuth {
         
         guard let accessToken = NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey) else {
             throw GithubOAuthError.MissingAccessToken("No token saved")
+            
         }
         
         return accessToken

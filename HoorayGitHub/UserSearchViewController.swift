@@ -11,7 +11,18 @@ import UIKit
 class UserSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var searchbar: UISearchBar!
+        {
+        didSet{
+            self.searchbar.delegate = self
+        }
+    }
     @IBOutlet weak var collectionView: UICollectionView!
+        {
+        didSet{
+            self.collectionView.delegate = self
+            self.collectionView.dataSource = self
+        }
+    }
     
     var users = [User]() {
         didSet{
@@ -20,12 +31,13 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     class func identifier() -> String {
-        return "UserSearchViewcontroller"
+        return "UserSearchViewController"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.collectionView.collectionViewLayout = CustomFlowLayout(columns: 3)
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,14 +103,28 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
         self.update(searchWord)
     }
     
+    // how many cells
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.users.count
     }
     
+    // what in each cell
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        // make cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("userCollectionViewCell", forIndexPath: indexPath) as! UserCollectionViewCell
+        
+        // modify cell
         let user = self.users[indexPath.row]
         cell.user = user
+
+        // return cell
         return cell
     }
+    
+    
+    @IBAction func performSegue(sender: UIButton) {
+        self.performSegueWithIdentifier("customSegue", sender: self)
+    }
+
 }

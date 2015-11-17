@@ -11,10 +11,21 @@ import UIKit
 class RepositorySearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
+        {
+        didSet{
+            self.searchBar.delegate = self
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
+        {
+        didSet{
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+        }
+    }
     
     var repositories = [Repository]() {
-        didSet{
+        didSet {
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
@@ -32,6 +43,8 @@ class RepositorySearchViewController: UIViewController, UISearchBarDelegate, UIT
     }
     
     func update(searchTerm: String) {
+    
+        print(searchTerm)
         
         do {
             let token = try GithubOAuth.shared.accessToken()
@@ -89,5 +102,6 @@ class RepositorySearchViewController: UIViewController, UISearchBarDelegate, UIT
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else {return}
         self.update(searchTerm)
+        
     }
 }

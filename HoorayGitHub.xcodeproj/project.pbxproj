@@ -23,6 +23,8 @@
 		C14FEC471BF6D1AD008E9BD7 /* GithubOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC461BF6D1AD008E9BD7 /* GithubOAuth.swift */; };
 		C14FEC491BF70151008E9BD7 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */; };
 		C14FEC4B1BF7049A008E9BD7 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */; };
+		C1BD972C1BFA016B00481C4B /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD972B1BFA016B00481C4B /* CustomSegue.swift */; };
+		C1BD97301BFAD58700481C4B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD972F1BFAD58700481C4B /* UserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		C14FEC461BF6D1AD008E9BD7 /* GithubOAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubOAuth.swift; sourceTree = "<group>"; };
 		C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		C1BD972B1BFA016B00481C4B /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		C1BD972F1BFAD58700481C4B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +119,11 @@
 		C14FEBF61BF67897008E9BD7 /* HoorayGitHub */ = {
 			isa = PBXGroup;
 			children = (
-				C14FEBF71BF67897008E9BD7 /* AppDelegate.swift */,
 				C14FEC451BF6D105008E9BD7 /* API */,
-				C14FEC281BF678A5008E9BD7 /* Model */,
 				C14FEC2A1BF678C3008E9BD7 /* Controller */,
+				C14FEC281BF678A5008E9BD7 /* Model */,
 				C14FEC291BF678AD008E9BD7 /* View */,
+				C14FEBF71BF67897008E9BD7 /* AppDelegate.swift */,
 				C14FEC011BF67897008E9BD7 /* Assets.xcassets */,
 				C14FEC031BF67897008E9BD7 /* LaunchScreen.storyboard */,
 				C14FEC061BF67897008E9BD7 /* Info.plist */,
@@ -161,6 +165,7 @@
 				C14FEBFB1BF67897008E9BD7 /* Main.storyboard */,
 				C14FEC4A1BF7049A008E9BD7 /* CustomFlowLayout.swift */,
 				C14FEC481BF70151008E9BD7 /* UserCollectionViewCell.swift */,
+				C1BD972B1BFA016B00481C4B /* CustomSegue.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				C14FEBF91BF67897008E9BD7 /* MyRepositoriesViewController.swift */,
 				C14FEC3B1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift */,
 				C14FEC3D1BF6CD68008E9BD7 /* UserSearchViewController.swift */,
+				C1BD972F1BFAD58700481C4B /* UserDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -317,8 +323,10 @@
 			files = (
 				C14FEC401BF6CE86008E9BD7 /* LoginViewController.swift in Sources */,
 				C14FEC3C1BF6CD4B008E9BD7 /* RepositorySearchViewController.swift in Sources */,
+				C1BD97301BFAD58700481C4B /* UserDetailViewController.swift in Sources */,
 				C14FEBFA1BF67897008E9BD7 /* MyRepositoriesViewController.swift in Sources */,
 				C14FEC441BF6CF8B008E9BD7 /* Repository.swift in Sources */,
+				C1BD972C1BFA016B00481C4B /* CustomSegue.swift in Sources */,
 				C14FEC4B1BF7049A008E9BD7 /* CustomFlowLayout.swift in Sources */,
 				C14FEC001BF67897008E9BD7 /* HoorayGitHub.xcdatamodeld in Sources */,
 				C14FEBF81BF67897008E9BD7 /* AppDelegate.swift in Sources */,
@@ -552,6 +560,7 @@
 				C14FEC211BF67897008E9BD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C14FEC221BF67897008E9BD7 /* Build configuration list for PBXNativeTarget "HoorayGitHubTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +569,7 @@
 				C14FEC241BF67897008E9BD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C14FEC251BF67897008E9BD7 /* Build configuration list for PBXNativeTarget "HoorayGitHubUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +578,7 @@
 				C14FEC271BF67897008E9BD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

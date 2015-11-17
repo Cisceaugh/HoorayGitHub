@@ -32,6 +32,5 @@ class UserCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         self.imageView.image = nil
     }
-    
 }
 
